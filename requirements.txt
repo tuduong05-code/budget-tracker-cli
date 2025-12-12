@@ -1,0 +1,2 @@
+# No external dependencies.
+# Project uses only the Python standard library (os, csv).
