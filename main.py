@@ -242,7 +242,7 @@ def view_summary():
     current_balance = total_income - total_expenses
 
     print("\nSummary:")
-    print(f"- Total income:    ${total_income:,.2f}")
+    print(f"- Total Income:    ${total_income:,.2f}")
     print(f"- Total Expenses:  ${total_expenses:,.2f}")
     print(f"- Current Balance: ${current_balance:,.2f}")
 
@@ -308,7 +308,7 @@ def evaluate_monthly_spending():
             monthly[year_month][ttype] += amount
 
     print("\nMonthly Financial Health:\n")
-    print(f"{'Month':<10}{'Income ($)':>15}{'Expense ($)':>15}{'Exp/Inc (%)':>15}{'Status':>15}")
+    print(f"{'Month':<10}{'Income ($)':>15}{'Expense ($)':>15}{'Exp/Inc':>15}{'Status':>15}")
     print("-" * 70)
 
     for month, totals in sorted(monthly.items()):
@@ -323,11 +323,13 @@ def evaluate_monthly_spending():
         else:
             status = "Overspending ❌"
 
-        print(f"{month:<10}"
-            f"{income:>14,.2f}"
-            f"{expense:>14,.2f}"
-            f"{expense_ratio:>14.1f}"
-            f"{status:>15}")
+        print(
+            f"{month:<10}"
+            f"{income:>15,.2f}"
+            f"{expense:>15,.2f}"
+            f"{expense_ratio:>15.1f}"
+            f"{status:>17}"
+            )
 
     print()
 
