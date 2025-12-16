@@ -52,6 +52,7 @@ python main.py
 - View monthly statistics
 - Evaluate monthly spending
 - Quit 
+
 3. Follow all instructions displayed in the terminal. 
 
 ## Credits
